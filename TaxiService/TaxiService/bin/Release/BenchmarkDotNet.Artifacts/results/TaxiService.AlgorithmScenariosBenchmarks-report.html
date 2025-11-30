@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='utf-8' />
+<title>TaxiService.AlgorithmScenariosBenchmarks-20251130-205044</title>
+
+<style type="text/css">
+	table { border-collapse: collapse; display: block; width: 100%; overflow: auto; }
+	td, th { padding: 6px 13px; border: 1px solid #ddd; text-align: right; }
+	tr { background-color: #fff; border-top: 1px solid #ccc; }
+	tr:nth-child(even) { background: #f8f8f8; }
+</style>
+</head>
+<body>
+<pre><code>
+BenchmarkDotNet v0.15.6, Windows 10 (10.0.19045.5011/22H2/2022Update)
+AMD Ryzen 5 3500U with Radeon Vega Mobile Gfx 2.10GHz, 1 CPU, 8 logical and 4 physical cores
+  [Host]     : .NET Framework 4.8.1 (4.8.9277.0), X86 LegacyJIT
+  DefaultJob : .NET Framework 4.8.1 (4.8.9277.0), X86 LegacyJIT
+</code></pre>
+<pre><code></code></pre>
+
+<table>
+<thead><tr><th>Method                                 </th><th>Mean   </th><th>Error</th><th>StdDev</th><th>Rank</th><th>Gen0</th><th>Gen1</th><th>Gen2</th><th>Allocated</th>
+</tr>
+</thead><tbody><tr><td>fewDriversOnSmallMap_EnumerationSearch</td><td>2.605 &mu;s</td><td>0.0222 &mu;s</td><td>0.0185 &mu;s</td><td>1</td><td>0.4730</td><td>-</td><td>-</td><td>248 B</td>
+</tr><tr><td>fewDriversOnSmallMap_PriorityQueueSearch</td><td>3.497 &mu;s</td><td>0.0263 &mu;s</td><td>0.0219 &mu;s</td><td>2</td><td>0.3662</td><td>-</td><td>-</td><td>192 B</td>
+</tr><tr><td>manyDriversOnSmallMap_PriorityQueueSearch</td><td>4.818 &mu;s</td><td>0.0775 &mu;s</td><td>0.0687 &mu;s</td><td>3</td><td>0.3662</td><td>-</td><td>-</td><td>192 B</td>
+</tr><tr><td>manyDriversOnVeryLargeMap_RadialSearch</td><td>4.940 &mu;s</td><td>0.0340 &mu;s</td><td>0.0284 &mu;s</td><td>3</td><td>1.3885</td><td>-</td><td>-</td><td>729 B</td>
+</tr><tr><td>manyDriversOnSmallMap_RadialSearch</td><td>6.020 &mu;s</td><td>0.0299 &mu;s</td><td>0.0265 &mu;s</td><td>4</td><td>1.5488</td><td>-</td><td>-</td><td>813 B</td>
+</tr><tr><td>manyDriversOnSmallMap_EnumerationSearch</td><td>6.873 &mu;s</td><td>0.0423 &mu;s</td><td>0.0375 &mu;s</td><td>5</td><td>1.7395</td><td>-</td><td>-</td><td>913 B</td>
+</tr><tr><td>fewDriversOnSmallMap_RadialSearch</td><td>29.694 &mu;s</td><td>0.3498 &mu;s</td><td>0.2921 &mu;s</td><td>6</td><td>4.2114</td><td>-</td><td>-</td><td>2227 B</td>
+</tr><tr><td>fewDriversOnVeryLargeMap_EnumerationSearch</td><td>1,816.779 &mu;s</td><td>14.2905 &mu;s</td><td>12.6681 &mu;s</td><td>7</td><td>-</td><td>-</td><td>-</td><td>336 B</td>
+</tr><tr><td>fewDriversOnVeryLargeMap_PriorityQueueSearch</td><td>3,076.966 &mu;s</td><td>20.4581 &mu;s</td><td>19.1365 &mu;s</td><td>8</td><td>-</td><td>-</td><td>-</td><td>192 B</td>
+</tr><tr><td>manyDriversOnVeryLargeMap_PriorityQueueSearch</td><td>15,288.522 &mu;s</td><td>102.2217 &mu;s</td><td>85.3598 &mu;s</td><td>9</td><td>-</td><td>-</td><td>-</td><td>-</td>
+</tr><tr><td>manyDriversOnVeryLargeMap_EnumerationSearch</td><td>47,164.766 &mu;s</td><td>904.7887 &mu;s</td><td>929.1513 &mu;s</td><td>10</td><td>272.7273</td><td>90.9091</td><td>90.9091</td><td>6195241 B</td>
+</tr><tr><td>fewDriversOnVeryLargeMap_RadialSearch</td><td>74,876.476 &mu;s</td><td>690.6180 &mu;s</td><td>612.2148 &mu;s</td><td>11</td><td>-</td><td>-</td><td>-</td><td>15214 B</td>
+</tr></tbody></table>
+</body>
+</html>

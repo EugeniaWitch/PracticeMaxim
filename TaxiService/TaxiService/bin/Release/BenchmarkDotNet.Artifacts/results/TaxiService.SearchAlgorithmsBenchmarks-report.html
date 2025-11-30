@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='utf-8' />
+<title>TaxiService.SearchAlgorithmsBenchmarks-20251130-204305</title>
+
+<style type="text/css">
+	table { border-collapse: collapse; display: block; width: 100%; overflow: auto; }
+	td, th { padding: 6px 13px; border: 1px solid #ddd; text-align: right; }
+	tr { background-color: #fff; border-top: 1px solid #ccc; }
+	tr:nth-child(even) { background: #f8f8f8; }
+</style>
+</head>
+<body>
+<pre><code>
+BenchmarkDotNet v0.15.6, Windows 10 (10.0.19045.5011/22H2/2022Update)
+AMD Ryzen 5 3500U with Radeon Vega Mobile Gfx 2.10GHz, 1 CPU, 8 logical and 4 physical cores
+  [Host]     : .NET Framework 4.8.1 (4.8.9277.0), X86 LegacyJIT
+  DefaultJob : .NET Framework 4.8.1 (4.8.9277.0), X86 LegacyJIT
+</code></pre>
+<pre><code></code></pre>
+
+<table>
+<thead><tr><th>Method                    </th><th>Mean    </th><th>Error </th><th>StdDev</th><th>Rank</th><th>Gen0</th><th>Allocated</th>
+</tr>
+</thead><tbody><tr><td>SmallMap_PriorityQueueSearch</td><td>873.9 ns</td><td>17.39 ns</td><td>37.06 ns</td><td>1</td><td>0.3662</td><td>192 B</td>
+</tr><tr><td>SmallMap_EnumerationSearch</td><td>1,209.9 ns</td><td>23.63 ns</td><td>40.76 ns</td><td>2</td><td>0.4730</td><td>248 B</td>
+</tr><tr><td>SmallMap_RadialSearch</td><td>1,487.3 ns</td><td>29.43 ns</td><td>71.08 ns</td><td>3</td><td>0.4730</td><td>248 B</td>
+</tr><tr><td>MediumMap_EnumerationSearch</td><td>15,275.3 ns</td><td>261.67 ns</td><td>399.60 ns</td><td>4</td><td>0.6409</td><td>345 B</td>
+</tr><tr><td>MediumMap_PriorityQueueSearch</td><td>29,328.2 ns</td><td>489.21 ns</td><td>457.60 ns</td><td>5</td><td>0.3662</td><td>192 B</td>
+</tr><tr><td>MediumMap_RadialSearch</td><td>31,084.6 ns</td><td>196.31 ns</td><td>183.63 ns</td><td>6</td><td>3.5400</td><td>1867 B</td>
+</tr><tr><td>LargeMap_RadialSearch</td><td>246,933.3 ns</td><td>1,993.88 ns</td><td>1,865.08 ns</td><td>7</td><td>6.8359</td><td>3720 B</td>
+</tr><tr><td>LargeMap_EnumerationSearch</td><td>453,008.7 ns</td><td>2,531.79 ns</td><td>2,244.36 ns</td><td>8</td><td>1.4648</td><td>912 B</td>
+</tr><tr><td>VeryLargeMap_RadialSearch</td><td>674,552.7 ns</td><td>7,941.63 ns</td><td>7,040.05 ns</td><td>9</td><td>20.5078</td><td>10873 B</td>
+</tr><tr><td>LargeMap_PriorityQueueSearch</td><td>788,671.5 ns</td><td>9,105.03 ns</td><td>7,108.61 ns</td><td>10</td><td>-</td><td>192 B</td>
+</tr><tr><td>VeryLargeMap_EnumerationSearch</td><td>1,778,531.3 ns</td><td>12,121.50 ns</td><td>10,122.00 ns</td><td>11</td><td>1.9531</td><td>1633 B</td>
+</tr><tr><td>VeryLargeMap_PriorityQueueSearch</td><td>3,082,060.8 ns</td><td>28,512.18 ns</td><td>23,808.96 ns</td><td>12</td><td>-</td><td>174 B</td>
+</tr></tbody></table>
+</body>
+</html>
