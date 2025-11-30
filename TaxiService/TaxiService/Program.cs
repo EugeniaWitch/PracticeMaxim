@@ -345,7 +345,7 @@ namespace TaxiService
         }
     }
 
-    //Тестирование
+    //Стандартное тестирование
     [MemoryDiagnoser]
     [Orderer(SummaryOrderPolicy.FastestToSlowest)]
     [RankColumn]
@@ -416,7 +416,7 @@ namespace TaxiService
         [Benchmark]
         public void VeryLargeMap_PriorityQueueSearch() => veryLargeMap.PriorityQueueSearch();
     }
-
+    //Особое тестирование
     [MemoryDiagnoser]
     [Orderer(SummaryOrderPolicy.FastestToSlowest)]
     [RankColumn]
