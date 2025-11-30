@@ -61,7 +61,7 @@ namespace TaxiTests
             Assert.IsNotNull(gridMap);
         }
 
-        //Валидация некорректных размеров карты и количества водителей
+        //Валидация некорректных размеров карты и количества водителей (3)
         [Test]
         public void GridMap_Constructor_InvalidN_ThrowsArgumentException()
         {
@@ -93,7 +93,7 @@ namespace TaxiTests
             Assert.AreEqual(5, result.GetLength(1));
         }
 
-        //Проверяет обработку ошибок
+        //Проверяет обработку ошибок (2)
         [Test]
         public void GenerateMap_TooSmallMap_ThrowsException()
         {
